@@ -1,0 +1,186 @@
+/* imports----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&display=swap');
+
+
+/*general-styles----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+:root {
+    --dark-cyan: hsl(158, 36%, 37%);
+    --cream: hsl(30, 38%, 92%);
+    --very-dark-blue: hsl(212, 21%, 14%);
+    --dark-grayish-blue: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+}
+
+html {
+    box-sizing: border-box;
+}
+
+
+*,*::before,*::after {
+    box-sizing: inherit;
+}
+
+
+
+img {
+    width: 100%;
+}
+
+
+body {
+    background-color: rgb(219, 209, 209);
+    font-family: 'Fraunces','Montserrat', sans-serif;
+    font-size: 14px;
+    max-width: 1440px;
+ }
+
+p {
+    font-size: 14px;
+}
+
+/* card-wrapper------------------------------------------------------------------------------------------------------------------------------------------------ */
+.wrapper {
+    position: relative;
+    transform: translate(30%, 30%);
+    height: 350px;
+    display: grid;
+    width: 100%;
+    /* gap: 10px; */
+    /* background-position: 50% 50%; */
+    grid-template-columns: repeat(2, 200px);
+}
+
+
+
+
+/* left product card------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+.product-image {
+    height: 100%;
+    border-radius: 5px 0px 0px 5px;   
+}
+
+
+/* right product details------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+.perfume {
+    margin-top: 10px;
+    display: inline-block;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 2px;
+}
+
+h1 {
+    outline: 2px dotted green;
+    width: 140px;
+    font-weight: 700;
+}
+
+.description {
+    font-family: 'Montserrat', sans-serif;
+    word-spacing: 2px;
+    text-shadow: 1px 1px 1px rgb(188, 194, 200);
+    width: 220px;
+}
+
+.new-price {
+    font-size: 30px;
+}
+
+.old-price {
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+    bottom: 5px;
+    color: var(--dark-cyan);
+    /* text-shadow: var(--dark-grayish-blue) 0px 0px 0px; */
+    /* outline: 2px dotted; */
+    opacity: 50%;
+    font-weight: 700;
+    margin-left: 5px;
+    display: inline-block;
+    font-size: 11px;
+    text-decoration: line-through;
+}
+
+button {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--cream);
+    border-radius: 9px;
+    all: none;
+    padding: 10px;
+    width: 190px;
+    background-color: var(--dark-cyan) ;
+}
+
+.cart-icon {
+    width: initial;
+}
+
+.product-details {
+    background-color: white;
+    border-radius: 0px 5px 5px 0px;
+    width: 260px;
+    padding-left: 20px;
+}
+
+
+/* footer-section------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+/* media queries------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+/* 375px 1440px */
+
+@media (max-width:500px) {
+
+.wrapper {
+    width: 360px;
+    transform: none;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.product-details {
+    width: 100%;
+    border-radius: 0px 0px 5px 5px;
+}
+
+.product-image {
+    width: 100%;
+    border-radius: 5px 5px 0px 0px;
+
+}
+
+h1 {
+    outline: 2px dotted green;
+    width: 200px;
+}
+
+.old-price {
+    text-decoration: line-through;
+}
+
+button {
+    width: 94%;
+    margin-top: 11px;
+    margin-bottom: 20px;
+    font-size: 12px;   
+    font-weight: 700;
+}
+
+.cart-icon {
+    margin-right: 7px;
+    position: relative;
+    top: 3px;
+    width: 12px;
+}
+
+}
+

@@ -1,4 +1,4 @@
-/* imports----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* imports------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&display=swap');
 
@@ -23,39 +23,35 @@ html {
 
 
 
-img {
-    width: 100%;
-}
-
-
 body {
     background-color: rgb(219, 209, 209);
     font-family: 'Fraunces','Montserrat', sans-serif;
     font-size: 14px;
     max-width: 1440px;
- }
-
-p {
-    font-size: 14px;
 }
 
 /* card-wrapper------------------------------------------------------------------------------------------------------------------------------------------------ */
 .wrapper {
     position: relative;
-    transform: translate(30%, 30%);
     height: 350px;
     display: grid;
-    width: 100%;
-    /* gap: 10px; */
+    width: fit-content;
+    gap: 0px;
     /* background-position: 50% 50%; */
-    grid-template-columns: repeat(2, 200px);
+    grid-template-columns: repeat(2, auto);
 }
 
 
 
 
 /* left product card------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+
+.product-display {
+    width: 240px;
+}
+
 .product-image {
+    width: 100%;
     height: 100%;
     border-radius: 5px 0px 0px 5px;   
 }
@@ -63,28 +59,33 @@ p {
 
 /* right product details------------------------------------------------------------------------------------------------------------------------------------------------------- */
 
+
 .perfume {
-    margin-top: 10px;
+    color: var(--dark-cyan);
+    font-style: unset;
+    font-size: 12px;
+    margin-top: 25px;
     display: inline-block;
     font-family: 'Montserrat', sans-serif;
-    letter-spacing: 2px;
+    letter-spacing: 5px;
 }
 
 h1 {
-    outline: 2px dotted green;
     width: 140px;
     font-weight: 700;
 }
 
 .description {
+    color: var(--dark-cyan);
     font-family: 'Montserrat', sans-serif;
     word-spacing: 2px;
-    text-shadow: 1px 1px 1px rgb(188, 194, 200);
-    width: 220px;
+    width: 227px;
+    font-size: 14px;
 }
 
 .new-price {
     font-size: 30px;
+    color: var(--dark-cyan);
 }
 
 .old-price {
@@ -92,10 +93,6 @@ h1 {
     position: relative;
     bottom: 5px;
     color: var(--dark-cyan);
-    /* text-shadow: var(--dark-grayish-blue) 0px 0px 0px; */
-    /* outline: 2px dotted; */
-    opacity: 50%;
-    font-weight: 700;
     margin-left: 5px;
     display: inline-block;
     font-size: 11px;
@@ -103,24 +100,34 @@ h1 {
 }
 
 button {
+    font-weight: 700;
+    font-size: 11px;
+    margin-top: 30px;
     font-family: 'Montserrat', sans-serif;
     color: var(--cream);
-    border-radius: 9px;
-    all: none;
+    border-radius: 6px;
+    border-style: none;
     padding: 10px;
-    width: 190px;
+    width: 90%;
     background-color: var(--dark-cyan) ;
 }
 
+button:hover {
+    cursor: pointer;
+    background-color: var(--very-dark-blue);
+}
+
 .cart-icon {
-    width: initial;
+    position: relative;
+    top: 2px;
+    width: 12px;
 }
 
 .product-details {
     background-color: white;
     border-radius: 0px 5px 5px 0px;
-    width: 260px;
-    padding-left: 20px;
+    width: 285px;
+    padding: 0px 0px 0px 17px;
 }
 
 
@@ -134,22 +141,34 @@ button {
     color: hsl(228, 45%, 44%); 
 }
 
+
+
+
 /* media queries------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
 /* 375px 1440px */
 
-@media (max-width:500px) {
+@media (min-width: 500px) {
+    .wrapper {
+        position: absolute;
+        left: 3%;
+    }
+}
+
+
+@media (max-width: 550px) {
 
 .wrapper {
-    width: 360px;
+    width: 335px;
     transform: none;
     display: flex;
     flex-direction: column;
     margin-top: 20px;
+    margin-left: 20px;
 }
 
-.product-details {
-    width: 100%;
-    border-radius: 0px 0px 5px 5px;
+
+.product-display {
+    width: fit-content;
 }
 
 .product-image {
@@ -158,9 +177,24 @@ button {
 
 }
 
+.perfume {
+    margin-top: 20px;
+}
+
+.product-details {
+    width: 100%;
+    border-radius: 0px 0px 5px 5px;
+}
+
 h1 {
-    outline: 2px dotted green;
-    width: 200px;
+    width: fit-content;
+    font-size: 30px;
+    margin-bottom: 8px;
+    margin-top: 6px;
+}
+
+.description {
+    width: 302px;
 }
 
 .old-price {
@@ -175,12 +209,7 @@ button {
     font-weight: 700;
 }
 
-.cart-icon {
-    margin-right: 7px;
-    position: relative;
-    top: 3px;
-    width: 12px;
 }
 
-}
+
 

@@ -39,11 +39,11 @@ body {
 
 
 .wrapper {
+    height: ;
     position: relative;
     left: 50%;
     display: grid;
     width: fit-content;
-    gap: 0px;
     grid-template-columns: repeat(2, auto);
 }
 
@@ -53,7 +53,7 @@ body {
 /* left product card------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
 
 .product-display {
-    width: 240px;
+    width: 260px;
 }
 
 .product-image {
@@ -92,6 +92,8 @@ h1 {
 .new-price {
     font-size: 30px;
     color: var(--dark-cyan);
+    display: inline-block;
+    margin-top: 15px;
 }
 
 .old-price {
@@ -108,7 +110,7 @@ h1 {
 button {
     font-weight: 700;
     font-size: 11px;
-    margin-top: 30px;
+    margin-top: 20px;
     font-family: 'Montserrat', sans-serif;
     color: var(--cream);
     border-radius: 6px;
@@ -159,7 +161,7 @@ button:hover {
 .wrapper {
     position: relative;
     left: 50%;
-    width: 335px;
+    width: fit-content;
     transform: none;
     display: flex;
     flex-direction: column;
@@ -183,7 +185,7 @@ button:hover {
 }
 
 .product-details {
-    width: 100%;
+    width: 330px;
     border-radius: 0px 0px 5px 5px;
 }
 

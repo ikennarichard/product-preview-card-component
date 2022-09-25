@@ -27,17 +27,23 @@ body {
     background-color: rgb(219, 209, 209);
     font-family: 'Fraunces','Montserrat', sans-serif;
     font-size: 14px;
-    max-width: 1440px;
+  
 }
 
 /* card-wrapper------------------------------------------------------------------------------------------------------------------------------------------------ */
+.container {
+    width: 50vw;
+    display: flex;
+    justify-content: space-around;
+}
+
+
 .wrapper {
     position: relative;
-    height: 350px;
+    left: 50%;
     display: grid;
     width: fit-content;
     gap: 0px;
-    /* background-position: 50% 50%; */
     grid-template-columns: repeat(2, auto);
 }
 
@@ -147,17 +153,12 @@ button:hover {
 /* media queries------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
 /* 375px 1440px */
 
-@media (min-width: 500px) {
-    .wrapper {
-        position: absolute;
-        left: 3%;
-    }
-}
-
 
 @media (max-width: 550px) {
 
 .wrapper {
+    position: relative;
+    left: 50%;
     width: 335px;
     transform: none;
     display: flex;
